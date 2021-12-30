@@ -1,0 +1,125 @@
+.header{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    padding-top: 5px;
+}
+.planetscontainer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+}
+.planetcard{
+    width: 200px;
+    height: 150px;
+    /* background-color: white; */
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.dropdown{
+    width:100%;
+    height: 40px;
+    display: flex;
+}
+.dropdown input{
+    width: 90%;
+    height: 40px;
+    text-align: center; 
+    outline: none;
+}
+.dropdown input::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+  
+.vehicle{
+    width: 80%;
+    height: 40px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+}
+.choosedVehicle{
+    width: 80%;
+    height: 50px;
+    text-align: center;
+}
+.clear{
+    height: 25px;
+    width: 25px; 
+    padding-left: 8px;
+    background-color: red;
+    border-radius: 50%;
+    margin: 8px 0 1px 5px;
+    display: none;
+}
+.clear:hover{
+    cursor: pointer;
+}
+.vehicleContainer{
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: brown;
+    position: absolute;
+    opacity: 0.5;
+    top:0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.vehicleCardContainer{
+    width: 80vw;
+    height: 80vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: scroll;
+}
+.vehicleCard{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.avatar{
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    text-align: center;
+    padding-top: 35px;
+    border-radius: 50%;
+    margin: 10px;
+}
+.vehicleDetails{
+    width: 160px;
+    height: 150px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 10px;
+}
+.vehicleDetails div{
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+}
+.vehicleChoose{
+    width: 160px;
+    height: 20px;
+    background-color: blueviolet;
+    margin: 10px;
+    text-align: center;
+}
+
+
+
