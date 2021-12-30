@@ -1,16 +1,24 @@
 import React from 'react';
 import './../styles/styles.css';
-import { vehicleAction,updatedropdownValue } from '../Reducers/reducer';
+import { storeSelectedplanet,updatedropdownValue, clearPlanetVehicle } from '../Reducers/reducer';
 import { useSelector,useDispatch } from 'react-redux';
+var selectedVehicleReference;
 
 const Planetcard = ()=>{
 
     var ddvalues = [];
     
+    
     const dispatch = useDispatch();
-    const state = useSelector(state=>state.getPlanets);  
-
+    const state = useSelector(state=>state.getPlanets); 
+    const vehicleState = useSelector(state=>state.getVehicles); 
+    // console.log(vehicleState.selectedPlanet);
     const vehicleContainer = document.querySelector('.vehicleContainer');
+    if(selectedVehicleReference!==undefined){
+        selectedVehicleReference.innerHTML = vehicleState.selectedVehicle;
+    }
+    // console.log(selectedVehicleReference);
+
     const getSelectedText = (e=0)=>{
         
         if(e===0){
@@ -32,20 +40,28 @@ const Planetcard = ()=>{
         } 
 
     }
-
+    const clearSelectedPlanetVehicle = (planetName)=>{
+        console.log(planetName);
+        dispatch(clearPlanetVehicle(planetName));
+    }
     const clearText = (e)=>{
         if(e.target.classList.contains("clear")){
             e.stopPropagation();
             e.target.style.display = "none";
+            clearSelectedPlanetVehicle(e.target.previousElementSibling.previousElementSibling.value);
             e.target.previousElementSibling.previousElementSibling.value = "";      
             getSelectedText();
+            e.target.parentNode.nextElementSibling.innerHTML = "Choose Vehicle";
+            e.target.parentNode.nextElementSibling.nextElementSibling.innerHTML = " ";
         } 
     }
 
-    const chooseVehicle = ()=>{
+    const chooseVehicle = (e)=>{
         const planetInputs = document.querySelector('.planetinput');
-        console.log(planetInputs.value)
+        dispatch(storeSelectedplanet(e.target.previousElementSibling.childNodes[0].value));
+        selectedVehicleReference = e.target.nextElementSibling;
         vehicleContainer.style.display = "flex";
+        e.target.innerHTML = "Choose Another";
     }
 
     return( 
@@ -62,7 +78,7 @@ const Planetcard = ()=>{
                     x
                 </span>
            </div>
-           <div className="vehicle" id="vehContainer" onClick={()=>{chooseVehicle()}}>Choose Vehicle</div>
+           <div className="vehicle" id="vehContainer" onClick={(e)=>{chooseVehicle(e)}}>Choose Vehicle</div>
            <div className="choosedVehicle"></div>
         </div>
     )
