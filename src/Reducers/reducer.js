@@ -160,8 +160,8 @@ export const getVehicles = (state=vehicles,actions)=>{
     }
 
     if(actions.type==="vehicleReset"){
-        console.log("reset called");
-        console.log(state.dupVehicle);
+        // console.log("reset called");
+        // console.log(state.dupVehicle);
         return {...state,vehicle : state.dupVehicle,PlanettoVehicle : [],selectedPlanet : "",distanceToTravel:0, selectedVehicle : "", mapPlanetVehicle : {}};
     }
 

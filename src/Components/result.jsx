@@ -22,9 +22,7 @@ const Result = ()=>{
         dispatch(vehicleAction(vehicles));
    
      },[])
-
-
-    console.log(state);
+    // console.log(state);
     return(
         <div>{state.finalResult.status==="success" ? <Success/> : <Failure/>}
         </div>

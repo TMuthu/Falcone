@@ -2,7 +2,7 @@ import React from "react";
 import successimg from './../Assets/success.jpg';
 import './../styles/styles.css';
 import {useNavigate} from 'react-router-dom';
-import { useDispatch } from "react-redux";
+import { useDispatch,useSelector } from "react-redux";
 import { clearVehicleStore,clearPlanetStore } from "../Reducers/reducer";
 
 const Success = ()=>{
@@ -13,6 +13,8 @@ const Success = ()=>{
         dispatch(clearVehicleStore());
         navigate('/')
     }
+    const statePlanet = useSelector(state=>state.getPlanets);
+    const stateResult = useSelector(state=>state.getResults);
     return(
         <div className="successPage">
             <div className="resultBox">
@@ -23,8 +25,8 @@ const Success = ()=>{
                         <div className="resultText">
                             Success! Congratulations. You found a planet.
                         </div>
-                        <div>Planet : Donlon</div>
-                        <div>Time Taken : 200</div>
+                        <div>Planet : {stateResult.finalResult.planet_name}</div>
+                        <div>Time Taken : {statePlanet.tot_time}</div>
                         <div className="startAgainBtn" onClick={()=>{resetAll()}}>Start Again</div>
                 </div>
             </div>

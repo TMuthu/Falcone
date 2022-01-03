@@ -12,7 +12,7 @@ const Planetcard = ()=>{
     const dispatch = useDispatch();
     const state = useSelector(state=>state.getPlanets); 
     const vehicleState = useSelector(state=>state.getVehicles); 
-    console.log(vehicleState.mapPlanetVehicle);
+    // console.log(vehicleState.mapPlanetVehicle);
     if(Object.keys(vehicleState.mapPlanetVehicle).length !== 0 ){
     
         let distance;
@@ -80,8 +80,8 @@ const Planetcard = ()=>{
         dispatch(clearPlanetVehicle(planetName));
     }
     const clearText = (e)=>{
-        console.log("function called");
-        console.log(e);
+        // console.log("function called");
+        // console.log(e);
         if(e.target.classList.contains("clear")){
             e.stopPropagation();
             e.target.style.display = "none";
