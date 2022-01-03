@@ -2,7 +2,7 @@
     width: 100%;
     height: 50px;
     text-align: center;
-    color: white;
+    color: rgba(10, 20, 30, 0.85);
     font-size: 30px;
     padding-top: 5px;
 }
@@ -15,8 +15,7 @@
 }
 .planetcard{
     width: 200px;
-    height: 150px;
-    /* background-color: white; */
+    height: 100px;
     margin: 10px;
     display: flex;
     flex-direction: column;
@@ -47,7 +46,7 @@
 }
 .choosedVehicle{
     width: 80%;
-    height: 50px;
+    height: 20px;
     text-align: center;
 }
 .clear{
@@ -73,7 +72,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-     display: none;
+    flex-direction: column;
+    display: none;
 }
 .vehicleCardContainer{
     width: 80vw;
@@ -119,7 +119,95 @@
     background-color: blueviolet;
     margin: 10px;
     text-align: center;
+    margin-bottom: 0px;
 }
-
+.planetDetails{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.cancelVehicleBtn{
+    width: 100px;
+    height: 30px;
+    background-color: red;
+    text-align: center;
+    margin: 10px;
+    padding-top: 5px;
+}
+.selectedPlanet{
+    height: 30px;
+    padding: 5px;
+    background-color: aqua;
+    text-align: center;
+    margin: 10px;
+    padding-top: 5px;
+}
+.distance{
+    height: 30px;
+    padding: 5px;
+    background-color: aqua;
+    text-align: center;
+    margin: 10px;
+    padding-top: 5px;
+}
+.searchContainer{
+    width: 100%;
+    height: 30px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.searchBtn{
+    height: 30px;
+    background-color:green;
+    text-align: center;
+    padding: 5px;
+}
+.successPage{
+    /* background-color: rgb(75, 145, 168); */
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+.resultBox{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imagecontainer{
+    width: 50%;
+    height: 80vh;
+}
+.resultcontainer{
+    width:50%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 20px;
+}
+.resultcontainer div{
+    padding: 10px;
+}
+.resultText{
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+.startAgainBtn{
+    border: 2px solid black;
+    background-color: blue;
+}
 
 

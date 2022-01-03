@@ -1,11 +1,12 @@
 import React from 'react';
 import './../styles/animStyles.css';
-import motorcycle from './../Assets/motorcycle.png';
+import searching from './../Assets/searching.gif';
 
 const VehicleAnim = ()=>{
     return(
         <div className="animContainer">
-            <div><img src={motorcycle} width="30px" height="30px"></img></div>
+            <div className="searchingText">Searching...</div>
+            <div><img src={searching} width="400px" height="300vh"></img></div>
         </div>
     )
 }

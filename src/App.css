@@ -6,5 +6,6 @@
 .App{
   min-width: 100vw;
   min-height: 100vh;
-  background-color: rgba(10, 20, 30, 0.85);
+  /* background-color: rgba(10, 20, 30, 0.85); */
+  background-color: white;
 }
