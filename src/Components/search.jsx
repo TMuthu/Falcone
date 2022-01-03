@@ -15,6 +15,7 @@ const Search = ()=>{
     
     const searchJpg = document.querySelector('.animContainer');
     const Search = async ()=>{
+        
         if(Object.keys(state.mapPlanetVehicle).length !== 4){
             alert("Please Select all four planets to search");
         }

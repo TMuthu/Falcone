@@ -2,16 +2,18 @@
     width: 100%;
     height: 50px;
     text-align: center;
-    color: rgba(10, 20, 30, 0.85);
+    color: white;
     font-size: 30px;
     padding-top: 5px;
+    background-color: #011627;
 }
 .planetscontainer{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    background-color: blue;
+    background-color: #011627;
+    color: white;
 }
 .planetcard{
     width: 200px;
@@ -42,7 +44,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid black;
+    border: 2px solid white;
 }
 .choosedVehicle{
     width: 80%;
@@ -64,9 +66,8 @@
 .vehicleContainer{
     min-width: 100vw;
     min-height: 100vh;
-    background-color: brown;
+    background: rgba(247, 247, 247, 0.3);
     position: absolute;
-    opacity: 0.5;
     top:0;
     left: 0;
     display: flex;
@@ -78,7 +79,9 @@
 .vehicleCardContainer{
     width: 80vw;
     height: 80vh;
-    background-color: white;
+    background-color: #011627;
+    color:black;
+    opacity: 1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -94,18 +97,20 @@
 .avatar{
     width: 100px;
     height: 100px;
-    border: 2px solid black;
+    border: 2px solid white;
     text-align: center;
     padding-top: 35px;
     border-radius: 50%;
     margin: 10px;
+    background-color: #FF9F1C;
 }
 .vehicleDetails{
     width: 160px;
     height: 150px;
-    border: 2px solid black;
+    border: 2px solid white;
     border-radius: 10px;
     margin: 10px;
+    background-color: #FF9F1C;
 }
 .vehicleDetails div{
     text-align: center;
@@ -116,7 +121,7 @@
 .vehicleChoose{
     width: 160px;
     height: 20px;
-    background-color: blueviolet;
+    background-color: #FF9F1C;
     margin: 10px;
     text-align: center;
     margin-bottom: 0px;
@@ -140,7 +145,7 @@
 .selectedPlanet{
     height: 30px;
     padding: 5px;
-    background-color: aqua;
+    background-color: #FF9F1C;
     text-align: center;
     margin: 10px;
     padding-top: 5px;
@@ -148,7 +153,7 @@
 .distance{
     height: 30px;
     padding: 5px;
-    background-color: aqua;
+    background-color: #FF9F1C;
     text-align: center;
     margin: 10px;
     padding-top: 5px;

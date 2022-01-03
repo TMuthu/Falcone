@@ -23,7 +23,7 @@ const Success = ()=>{
                 </div>
                 <div className="resultcontainer">
                         <div className="resultText">
-                            Success! Congratulations. You found a planet.
+                            Success! Congratulations. You found a Falcone.
                         </div>
                         <div>Planet : {stateResult.finalResult.planet_name}</div>
                         <div>Time Taken : {statePlanet.tot_time}</div>
