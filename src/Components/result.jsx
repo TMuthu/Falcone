@@ -14,6 +14,7 @@ const Result = ()=>{
     const dispatch = useDispatch();
     const state = useSelector(state=>state.getResults)
 
+    //fetching initial values again for reset
     useEffect(async ()=>{
         const planets = await fetchPlanets();
         dispatch(planetAction(planets));
@@ -22,7 +23,7 @@ const Result = ()=>{
         dispatch(vehicleAction(vehicles));
    
      },[])
-    // console.log(state);
+
     return(
         <div>{state.finalResult.status==="success" ? <Success/> : <Failure/>}
         </div>
