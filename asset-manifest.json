@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/Falcone/static/css/main.64a9d1a4.css",
+    "main.js": "/Falcone/static/js/main.3534da6b.js",
+    "static/js/787.66975ca6.chunk.js": "/Falcone/static/js/787.66975ca6.chunk.js",
+    "static/media/searching.gif": "/Falcone/static/media/searching.fa7df95491ed9777b2b5.gif",
+    "static/media/success.jpg": "/Falcone/static/media/success.0dac26bfd843a6955f84.jpg",
+    "static/media/error.jpg": "/Falcone/static/media/error.52901d9bbdf93f8314f3.jpg",
+    "index.html": "/Falcone/index.html",
+    "main.64a9d1a4.css.map": "/Falcone/static/css/main.64a9d1a4.css.map",
+    "main.3534da6b.js.map": "/Falcone/static/js/main.3534da6b.js.map",
+    "787.66975ca6.chunk.js.map": "/Falcone/static/js/787.66975ca6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.64a9d1a4.css",
+    "static/js/main.3534da6b.js"
+  ]
+}
