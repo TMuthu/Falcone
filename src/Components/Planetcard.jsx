@@ -11,12 +11,12 @@ const Planetcard = ()=>{
     const dispatch = useDispatch();
     const state = useSelector(state=>state.getPlanets); 
     const vehicleState = useSelector(state=>state.getVehicles); 
-    // console.log(vehicleState.mapPlanetVehicle);
+    
+    //calculating the total time from the values from reducer
     if(Object.keys(vehicleState.mapPlanetVehicle).length !== 0 ){
     
         let distance;
         let speed;
-        
         let planetDistance = {};
         let vehicleSpeed = {};
         for(let i=0;i<state.planets.length;i++){
@@ -42,23 +42,23 @@ const Planetcard = ()=>{
         }
     }
     
-    // console.log(vehicleState.selectedPlanet);
     const vehicleContainer = document.querySelector('.vehicleContainer');
+    //displaying selected vehicle on planet card
     if(selectedVehicleReference!==undefined){
         selectedVehicleReference.innerHTML = vehicleState.selectedVehicle;
     }
-    // console.log(selectedVehicleReference);
 
+    //Creates a array of planet values with selected values
     const getSelectedText = (e=0)=>{
         
         if(e===0){
+            //This part will execute when this function called from clearText() method.
             const planetInputs = document.querySelectorAll('.planetinput');
             ddvalues = [planetInputs[0].value, planetInputs[1].value, planetInputs[2].value, planetInputs[3].value]
             dispatch(updatedropdownValue(ddvalues))
         }
         else if(e.target.value === "" || e.target.value==="Donlon" || e.target.value==="Enchai"||e.target.value==="Sapir"|| e.target.value==="Jebing" || e.target.value==="Lerbin"||e.target.value==="Pingasor"){
             if(e.target.value !== ""){
-                
                 e.target.nextElementSibling.nextElementSibling.style.display = "block";
             }
             else{
@@ -74,13 +74,13 @@ const Planetcard = ()=>{
         } 
 
     }
+    //Cleares a planet name after clicking on clearSelection button
     const clearSelectedPlanetVehicle = (planetName)=>{
-        // console.log(planetName);
         dispatch(clearPlanetVehicle(planetName));
     }
+
+    //clear a value present in planet dropdown
     const clearText = (e)=>{
-        // console.log("function called");
-        // console.log(e);
         if(e.target.classList.contains("clear")){
             e.stopPropagation();
             e.target.style.display = "none";
@@ -93,6 +93,7 @@ const Planetcard = ()=>{
         } 
     }
 
+    //choose vehicle for selected planet
     const chooseVehicle = (e)=>{
         let distance;
         for(var i=0;i<state.planets.length;i++){
@@ -106,7 +107,6 @@ const Planetcard = ()=>{
         }
         else{
             if(e.target.innerHTML === "Choose Another"){
-                // console.log(e.target.nextElementSibling.innerHTML);
                 dispatch(storeSelectedplanet(e.target.previousElementSibling.childNodes[0].value,distance));
                 dispatch(updateVehicle(e.target.nextElementSibling.innerHTML));
                 selectedVehicleReference = e.target.nextElementSibling;
@@ -116,7 +116,6 @@ const Planetcard = ()=>{
                 
             }
             else{
-                // const planetInputs = document.querySelector('.planetinput');
                 dispatch(storeSelectedplanet(e.target.previousElementSibling.childNodes[0].value,distance));
                 selectedVehicleReference = e.target.nextElementSibling;
                 vehicleContainer.style.display = "flex";

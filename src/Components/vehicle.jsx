@@ -14,6 +14,7 @@ const Vehicle = ()=>{
 
     const vehicleContainer = document.querySelector('.vehicleContainer');
 
+    //getting milege for selected planet
     const getPlanetMilege = (planet)=>{
         // console.log(planet);
         for(var i=0;i<planetState.planets.length;i++){
@@ -22,9 +23,8 @@ const Vehicle = ()=>{
             }
         }
     }
-
+    //checking and adding vehicles to reducer
     const chooseFunc = (vehicleName,vehicleMaxDistance,total_no)=>{
-        
         const planet = state.selectedPlanet;
         const planetMilege = getPlanetMilege(planet);
         if(total_no === 0){
@@ -40,6 +40,7 @@ const Vehicle = ()=>{
         }
        
     }
+    //closing vehicle window when pressing cancel button
     const closeVehicleWindow = ()=>{
         dispatch(updateVehicle("cancelUpdate"));
         vehicleContainer.style.display = "none";

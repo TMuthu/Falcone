@@ -13,6 +13,7 @@ const Failure = ()=>{
 
     const statePlanet = useSelector(state=>state.getPlanets);
 
+    //clears planet and vehicle store
     const resetAll = ()=>{
         dispatch(clearPlanetStore());
         dispatch(clearVehicleStore());
