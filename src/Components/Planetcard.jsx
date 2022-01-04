@@ -2,7 +2,6 @@ import React from 'react';
 import './../styles/styles.css';
 import { storeSelectedplanet,updatedropdownValue,clearSelectedVehicle,storeSelectedVehicle, clearPlanetVehicle, setTotalTime,updateVehicle } from '../Reducers/reducer';
 import { useSelector,useDispatch } from 'react-redux';
-import VehicleAnim from './vehicleAnim';
 var selectedVehicleReference;
 
 const Planetcard = ()=>{
@@ -129,13 +128,13 @@ const Planetcard = ()=>{
 
     return( 
         <div>
-        <div className='planetcard'>
+        <div className='planetcard' data-testid="planetCard">
            <div className="dropdown">
                 <input title="choose planet" className="planetinput" type="text" name="planets" list="planetslist" placeholder="Choose Planet" onChange={(e)=>{getSelectedText(e)}}/>
                     <datalist id="planetslist">
                         {state.dropdownValue.map((e)=>{
                             return(
-                            <option value={e} key={e}>{e}</option> )
+                            <option value={e} key={e} data-testid="planetValues">{e}</option> )
                         })}
                     </datalist> 
                 <span className="clear" onClick={(e)=>{clearText(e)}} title="Clear Selection"> 

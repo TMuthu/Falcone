@@ -46,14 +46,14 @@ const Vehicle = ()=>{
     }
     
     return(
-        <div className="vehicleContainer">
+        <div className="vehicleContainer" data-testid="vehicleContainer">
             <div>
                 <div className="vehicleCardContainer">
                     {state.vehicle === undefined ? <div>Loading</div> : state.vehicle.map((e)=>{
                     return(
                         <div className="vehicleCard" key={e.name}>
                         <div className="avatar">
-                            <p>{e.name}</p>
+                            <p data-testid="vehicleAvatar">{e.name}</p>
                         </div>
                         <div className="vehicleDetails">
                             <div>Max Distance : {e.max_distance}</div>

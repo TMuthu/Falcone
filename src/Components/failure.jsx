@@ -29,7 +29,7 @@ const Failure = ()=>{
                         <div className="resultText">
                             Awww....! Don't Cry. Falcone is not there.
                         </div>
-                        <div>Time Taken : {statePlanet.tot_time}</div>
+                        <div data-testid="resultTime">Time Taken : {statePlanet.tot_time}</div>
                         <div className="startAgainBtn" onClick={()=>{resetAll()}}>Start Again</div>
                 </div>
             </div>

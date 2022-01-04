@@ -1,6 +1,6 @@
 const Planets = {planets : [],dropdownValue :[],tot_time:0};
 const vehicles = {vehicle : [],dupVehicle : [],updateVehicle : "",PlanettoVehicle : [],selectedPlanet : "",distanceToTravel:0, selectedVehicle : "", mapPlanetVehicle : {}};
-const result = {finalResult:""};
+const result = {finalResult:{}};
 
 export const planetAction = ((data)=>({
     type:"getPlanets",
